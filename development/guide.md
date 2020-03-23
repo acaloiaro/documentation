@@ -50,7 +50,7 @@ the change.
 
 ### Releases are driven by commit messages
 
-We use the wonderful [Semantic Release](https://github.com/semantic-release/semantic-release))
+We use the wonderful [Semantic Release](https://github.com/semantic-release/semantic-release)
 project to manage releasing new versions of all our projects.
 
 Semantic Release looks for a [certain commit message format](https://github.com/semantic-release/semantic-release#commit-message-format) to decide when to release.
@@ -133,7 +133,7 @@ BREAKING CHANGE: this project now requires the Libpostal Service to be present i
 
 ## Best practices for Pull Requests
 
-#### Reach out to us first before doing a lot of work
+### Reach out to us first before doing a lot of work
 
 Nothing makes us more sad than saying no to a pull request that someone worked hard on.
 
@@ -146,7 +146,7 @@ going forward that might influence your work, and discuss any plans you have bef
 We're also happy to review "draft" or unfinished PRs before they are done, so we can give input on
 whether or not a particular approach is looking promising.
 
-#### Keep your pull requests small
+### Keep your pull requests small
 
 We always appreciate small pull requests that focus on a specific change. This makes it easier to
 test and review.
@@ -154,7 +154,7 @@ test and review.
 Whenever possible, we support your efforts to split one large pull request into several smaller
 ones.
 
-#### Rebase against master
+### Rebase against master
 
 If other changes have been made while your Pull Request is in progress, please occasionally update
 your PR to rebase against those new changes.
@@ -165,8 +165,25 @@ that its easy to figure out how and why changes came in when working in the futu
 
 You can generally do this with `git rebase origin master`.
 
-#### Allow changes to your pull requests
+### Allow changes to your pull requests
 
 GitHub allows maintainers to make changes to a pull request created by another user. Please [enable
 this
 functionality](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork) as we often want to make little changes to your pull request rather than go back and forth over them.
+
+## Commonly used tools
+
+As a large project with many smaller components, we try to keep the Pelias
+development process as consistent as possible.
+
+This section lists various tools and utilities that are common in Pelias. Where
+possible, use these tools.
+
+
+| Functionality | Pelias Standard |
+| --- | --- |
+| Javascript Linting | [JSHint](https://github.com/jshint/jshint/) |
+| Test framework | [Tape](https://github.com/substack/tape) |
+| Node.js stream library | [through2](https://github.com/rvagg/through2) |
+| General utility library | [lodash](https://github.com/lodash/lodash) |
+
