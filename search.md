@@ -151,7 +151,52 @@ Tip: You can look up a bounding box for a known region with this [web tool](http
 
 Sometimes you don't have a rectangle to work with, but rather you have a point on earth&mdash;for example, your location coordinates&mdash;and a maximum distance within which acceptable results can be located.
 
-In this example, you want to find all YMCA locations within a 35-kilometer radius of a location in Ontario, Canada. This time, you can use the `boundary.circle.*` parameter group, where `boundary.circle.lat` and `boundary.circle.lon` is your location in Ontario and `boundary.circle.radius` is the acceptable distance from that location. Note that the `boundary.circle.radius` parameter is always specified in kilometers.
+In this example, you want to find all YMCA locations within a 35-kilometer radius of a location in39
+* YMCA, Forest City, IA
+40
+* YMCA, Fargo, ND
+41
+* YMCA, Taipei, Taipei City
+42
+* YMCA, Orpington, Greater London
+43
+* YMCA, Frisco, TX
+44
+* YMCA, Jefferson, OH
+45
+* YMCA, Belleville, IL
+46
+​39
+* YMCA, Forest City, IA
+40
+* YMCA, Fargo, ND
+41
+* YMCA, Taipei, Taipei City
+42
+* YMCA, Orpington, Greater London
+43
+* YMCA, Frisco, TX
+44
+* YMCA, Jefferson, OH
+45
+* YMCA, Belleville, IL
+46
+​39
+* YMCA, Forest City, IA
+40
+* YMCA, Fargo, ND
+41
+* YMCA, Taipei, Taipei City
+42
+* YMCA, Orpington, Greater London
+43
+* YMCA, Frisco, TX
+44
+* YMCA, Jefferson, OH
+45
+* YMCA, Belleville, IL
+46
+​ Ontario, Canada. This time, you can use the `boundary.circle.*` parameter group, where `boundary.circle.lat` and `boundary.circle.lon` is your location in Ontario and `boundary.circle.radius` is the acceptable distance from that location. Note that the `boundary.circle.radius` parameter is always specified in kilometers.
 
 > [/v1/search?text=YMCA&__boundary.circle.lon=-79.186484&boundary.circle.lat=43.818156&boundary.circle.radius=35__](https://pelias.github.io/compare/#/v1/search%3Fboundary.circle.lon=-79.186484&boundary.circle.lat=43.818156&boundary.circle.radius=35&text=ymca)
 
@@ -207,7 +252,7 @@ Many use cases call for the ability to promote nearby results to the top of the 
 
 ![Searching around a point](/images/focus_point.png)
 
-By specifying a `focus.point`, results will be sorted in part by their proximity to the given coordinate. All else being equal, results closes to the point will show up higher. However, unlike a `boundary.circle` query, important results far from the given coordinate may still be returned. This allows, for example, [a query for places called Paris with a `focus.point` value in Texas to return both Paris, TX and Paris, France](http://pelias.github.io/compare/#/v1/autocomplete%3Ffocus.point.lat=33.7568&focus.point.lon=-95.5362&layers=locality&sources=wof&text=paris).
+By specifying a `focus.point`, results will be sorted in part by their proximity to the given coordinate. All else being equal, results closest to the point will show up higher. However, unlike a `boundary.circle` query, important results far from the given coordinate may still be returned. This allows, for example, [a query for places called Paris with a `focus.point` value in Texas to return both Paris, TX and Paris, France](http://pelias.github.io/compare/#/v1/autocomplete%3Ffocus.point.lat=33.7568&focus.point.lon=-95.5362&layers=locality&sources=wof&text=paris).
 
 To find YMCAs again, but this time near a specific coordinate location (representing the Sydney Opera House) in Sydney, Australia, use `focus.point`.
 
